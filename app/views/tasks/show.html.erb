@@ -1,0 +1,19 @@
+<h1><%= @task.title %></h2>
+
+<% if @task.completed %>
+   
+        <p>Do not mix colors</p>
+    
+     <input type="checkbox"  checked disabled="true">
+       <span>This task is completed</span>
+       <%= link_to  "Back to list" ,index_path%>
+    <% else %>
+   
+        <p>A lot of flash cards to do</p>
+   
+    <input type="checkbox" disabled="true" >
+    <span>This task is not completed yet</span>
+     <%= link_to  "Back to list" ,index_path%>
+  <%end%>
+  
+
