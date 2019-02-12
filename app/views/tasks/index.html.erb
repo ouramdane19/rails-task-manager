@@ -4,7 +4,6 @@
   <li>
   <% if task.completed %>
      <input type="checkbox"  checked disabled="true">
-       
        <%= link_to  "#{task.title}" ,show_path(task.id)%>
     <% else %>
     <input type="checkbox" disabled="true" >

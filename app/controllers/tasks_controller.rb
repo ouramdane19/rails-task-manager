@@ -22,6 +22,14 @@ class TasksController < ApplicationController
         @task = Task.find(params[:id])
     end
 
+    def update
+        task = Task.find(params[:id])
+        task.update(title: params[:title], details: params[:details])
+    end 
 
+    def destroy
+        task = Task.find(params[:id])
+        task.destroy
+    end 
 
 end
